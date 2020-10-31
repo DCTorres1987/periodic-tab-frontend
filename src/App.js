@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import ElementList from './elementList'
+import { fetchElements } from './actions/elementActions'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+
+  componentDidMount() {
+    this.props.fetchElements()
+  }   
+
+  render() {
+
+    const { elementList, loading } = this.props
+
+    return (
+      <div className='App'>
+        {!loading ? <ElementList elementList={elementList} /> : 'Loading!'}
+      </div>
+    )
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    elementList: state.elements,
+    loading: state.loading
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchElements: () => dispatch(fetchElements())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+
