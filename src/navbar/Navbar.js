@@ -19,6 +19,8 @@ function Navbar() {
         }
     };
 
+    window.addEventListener('resize', showButton)
+
     useEffect(() => {
         showButton();
       }, []);
@@ -28,7 +30,7 @@ function Navbar() {
         <>
             <nav className="navbar">
                <div className="navbar-container">
-                   <Link to="/" className="navbar-logo">
+                   <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                         SCIENCE <i className='fab fa-typo3' />
                    </Link>
                    <div className='menu-icon' onClick={handleClick}>
@@ -47,7 +49,7 @@ function Navbar() {
                             </Link>
                         </li>
                    </ul>
-                   {button && <Button buttonstyle='btn--outline'>SIGN UP</Button>}
+                   {button && <Button buttonstyle='btn--outline'>Periodic Table</Button>}
                 </div> 
             </nav>
         </>

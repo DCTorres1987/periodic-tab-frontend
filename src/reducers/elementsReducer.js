@@ -1,8 +1,8 @@
-const elementsReducer  = (state = { elements: [], loading: false }, action) => {
+function elementsReducer(state = {elements: [], loading: false}, action) {
 
     switch(action.type) {
+    
       case 'LOADING_ELEMENTS':
-        console.log('fourth')
 
         return {
           ...state,
@@ -10,7 +10,7 @@ const elementsReducer  = (state = { elements: [], loading: false }, action) => {
           loading: true
         }
       case 'SET_ELEMENT':
-        console.log('fifth')
+
         return {
           ...state,
           elements: action.elements,
@@ -20,5 +20,6 @@ const elementsReducer  = (state = { elements: [], loading: false }, action) => {
         return state;
     }
   }
-   
+
+
   export default elementsReducer;

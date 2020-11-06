@@ -1,5 +1,5 @@
 export const fetchElements = () => {
-  console.log('third')
+
     return (dispatch) => {
       dispatch({type: 'LOADING_ELEMENTS'})
       fetch(`http://localhost:3001/elements`)
