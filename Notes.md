@@ -14,3 +14,14 @@ ONLY REQUIRED METHOD FOR A REACT COMPONENT TO BE VALID IS RENDER()
 CONSTRUCTOR - it is the first function called upon the initialization of a component; this makes it useful for creating an initial state for a component.
 
 COMPONENTDIDMOUNT() - method will get called just after the render method. You would use this method to set up any long-running processes or asynchronous processes such as fetching and updating data. 
+
+getDerivedStateFromProps is invoked right before calling the render method, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.
+
+ACTIONS ALWAYS NEED A TYPE PROPERTY SO THE FUNCTION KNOWS WHAT TO DO. 
+
+REDUX FLOW
+ACTION => REDUCER (FUNCTION) => UPDATED STATE
+
+REDUCERS => ARE PURE FUNCTIONS
+PURE FUNCTIONS => PURE FUNCTIONS ARE ONLY DETERMINED BY THEIR INPUT VALUES
+               => PURE FUNCTIONS HAVE NO SIDE EFFECTS. NO EFFECTS OUTSIDE OF THE FUNCTION. ONLY RETURN A VALUE.

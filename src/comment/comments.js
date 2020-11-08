@@ -6,10 +6,9 @@ const Comments = ({element, commentList }) => {
 
   const comments = commentList.filter((comment) => comment.element_id === element.id);
 
-
     return (
         <div>
-            {comments ? <CommentsLoad comments={comments} /> : 'Loading..'}
+            {commentList ? <CommentsLoad comments={comments} /> : 'Loading..'}
         </div>
     )
 }

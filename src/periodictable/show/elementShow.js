@@ -2,8 +2,8 @@
 import React from 'react';
 import CommentForm from '../../comment/commentForm';
 import Element from '../presentational/element';
-import { Link } from 'react-router-dom';
 import Comments from '../../comment/comments';
+import { Button } from '../../navbar/button';
 
 const ElementShow = ({match, elementList, commentList }) => {
 
@@ -15,11 +15,11 @@ const ElementShow = ({match, elementList, commentList }) => {
     return (
       <div>
             {element ? <Element element={element} /> : 'Loading..'}<br/><br/>
-            <p>What Objects is made up of this Element? Please leave a comment below.</p><br/>
+            <h2>What Objects is made up of this Element? Please leave a comment below.</h2><br/>
             {element ? <CommentForm element={element} /> : 'Loading..'} <br/><br/>
             {commentList ? <Comments commentList={commentList} element={element} /> : 'Loading..'}
             <ul>
-              <Link to={`/periodictable/`}> Back </Link>
+              <Button to={`/periodictable/`}> Back </Button>
             </ul>    
       </div>  
     )

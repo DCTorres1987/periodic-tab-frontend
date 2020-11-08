@@ -22,7 +22,7 @@ const ElementList = ({elementList}) => {
                 <div className="periodic-table">
 
                     {elementList.map((element) =>
-                        <Link key={element.number} to={`/periodictable/${element.number}`}
+                        <Link key={element.number} to={`/elements/${element.number}`}
                     
                                 className='element'
                                 style={{

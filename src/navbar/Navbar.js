@@ -12,18 +12,12 @@ function Navbar() {
     const closeMobileMenu =() => setClick(false);
 
     const showButton = () => {
-        if(window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
+        if(window.innerWidth <= 960) {setButton(false);} else {setButton(true);}
     };
 
     window.addEventListener('resize', showButton)
 
-    useEffect(() => {
-        showButton();
-      }, []);
+    useEffect(() => {showButton();}, []);
     
 
     return (
@@ -33,6 +27,7 @@ function Navbar() {
                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                         SCIENCE <i className='fab fa-typo3' />
                    </Link>
+
                    <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} /> 
                    </div>
@@ -44,11 +39,12 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/periodictable' className='nav-links-mobile' onClick={closeMobileMenu}>
+                            <Link to='/elements' className='nav-links-mobile' onClick={closeMobileMenu}>
                                 Periodic Table
                             </Link>
                         </li>
                    </ul>
+                   
                    {button && <Button buttonstyle='btn--outline'>Periodic Table</Button>}
                 </div> 
             </nav>

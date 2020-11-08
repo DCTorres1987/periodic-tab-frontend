@@ -6,12 +6,12 @@ import HomeSection from './navbar/homeSection';
 
 // stateless componenet
 // used to render presentational component
-function Home() {
- return (
-     <>
-        <HomeSection />
-     </>
- );   
+const Home = () => {
+    return (
+        <>
+            <HomeSection />
+        </>
+    );   
 }
 
 export default Home;

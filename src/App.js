@@ -14,7 +14,7 @@ import { fetchComments } from './actions/loadComments';
 import './App.css';
 
 
-
+// container component that handles how the data for the elements is retrieved and setting up the routes
 class App extends Component {
   // ComponentDidMount
   // method will get called just after the render method. You would use this method to set up any long-running processes or asynchronous processes such as fetching and updating data. 
@@ -31,7 +31,7 @@ class App extends Component {
             <Navbar />
               <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/periodictable' component={ElementPage}  />
+                <Route path='/elements' component={ElementPage}  />
               </Switch>
           </div>
       </>

@@ -6,12 +6,18 @@
   }
   
   
-  /* .sign-up {
-    background-image: url('/images/img-8.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-  } */
+  scroll-container {
+    display: block;
+    width: 350px;
+    height: 200px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 5em;
+  }
   

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { postComments } from "../actions/postComments"
 
+// container component handles how the form passes in data and updates the state
 class CommentForm extends Component {
 // constructor
 // it is the first function called upon the initialization of a component; this makes it useful for creating an initial state for a component.
