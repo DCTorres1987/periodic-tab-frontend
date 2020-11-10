@@ -1,6 +1,6 @@
-  
+  // setting the initial state
   function commentsReducer( state = {comments: [], loading:false}, action) {
-
+// passing in the action type from dispatch
     switch(action.type) {
         case 'LOADING_COMMENTS':
 
@@ -17,7 +17,7 @@
             loading: false
           }
         case 'ADD_COMMENT':
-    
+    // adds comments at the end of state
           return {
             ...state,
             comments: [...state.comments, action.comments],

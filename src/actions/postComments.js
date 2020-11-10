@@ -1,6 +1,6 @@
 export const postComments = (commentData = {}, elementId ) => {
 
-    return(dispatch, getState) => {
+    return(dispatch) => {
 
         fetch (`http://localhost:3001/comments`, {
             method: "POST",
