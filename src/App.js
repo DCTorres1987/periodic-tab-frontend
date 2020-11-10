@@ -40,6 +40,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => {
+ 
   return {
     fetchElements: () => dispatch(fetchElements()),
     fetchComments: () => dispatch(fetchComments())

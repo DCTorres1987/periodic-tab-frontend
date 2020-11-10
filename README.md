@@ -25,7 +25,7 @@ Run 'npm start' on the frontend and navigate to 'https://localhost:3000' to be r
 -Backend was built wih Ruby on Rails
 -Frontend was built using vanilla Javascript, React.js and Redux
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/DCTorres1987/JS---PokemonTeam-Selector-App. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/DCTorres1987?tab=repositories. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 License
 The gem is available as open source under the terms of the MIT License.
