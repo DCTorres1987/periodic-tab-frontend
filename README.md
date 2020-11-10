@@ -1,4 +1,5 @@
-###Interactive Periodc Table application
+
+## Interactive Periodic Table Application
 
 Description
 This project is designed to allow you to learn about the various elements on the periodic table. The application allows you to click on each element on the table and read a description about that element and leave a comment.
