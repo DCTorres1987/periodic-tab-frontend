@@ -6,7 +6,8 @@ const STYLES = ['btn--primary', 'btn--outline']
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-export const Button = ({children, type, onClick, buttonStyle, buttonSize}) => {
+export const Button = ({children, buttonStyle, buttonSize}) => {
+    console.log('Return Button Components')
 
     const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
 
@@ -16,8 +17,6 @@ export const Button = ({children, type, onClick, buttonStyle, buttonSize}) => {
         <Link to='/elements' className='btn-mobile'>
             <button
                 className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-                onClick={onClick}
-                type={type}
             >
                 {children}
             </button>

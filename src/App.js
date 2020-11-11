@@ -1,30 +1,30 @@
-// import content React content from node modules folder
+
 import React, { Component, Fragment } from 'react';
-// importing connect, switch, and route to use in App.js
+
 import { connect } from 'react-redux';
 import {Switch, Route } from 'react-router-dom';
-// importing from various files in subfolder to use in App.js
+
 import ElementPage from './periodictable/elementPage'
 import Navbar from './navbar/Navbar'
-import Home from './style/homeSection';
-// import components handling fetches
+import Home from './homepage/homeSection';
+
 import { fetchElements } from './actions/loadElements';
 import { fetchComments } from './actions/loadComments';
-// import file to set styling throughout application
+
 import './App.css';
 
 
-// container component that handles how the data for the elements is retrieved and setting up the routes
+
 class App extends Component {
-  // ComponentDidMount
-  // method will get called just after the render method. You would use this method to set up any long-running processes or asynchronous processes such as fetching and updating data. 
+
   componentDidMount() {
+    console.log('componentDidMount')
     this.props.fetchElements()
     this.props.fetchComments()
   }   
 
   render() {
-   
+    console.log('Render App.js')
     return (
       <>     
           <div className='App'>          
@@ -40,7 +40,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => {
- 
+ console.log('mapDispatchToProps')
   return {
     fetchElements: () => dispatch(fetchElements()),
     fetchComments: () => dispatch(fetchComments())

@@ -5,6 +5,7 @@ import './Navbar.css';
 
 
 function Navbar() {
+
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true)
 
@@ -14,11 +15,12 @@ function Navbar() {
     const showButton = () => {
         if(window.innerWidth <= 960) {setButton(false);} else {setButton(true);}
     };
-
+// listens for changes to window size
     window.addEventListener('resize', showButton)
 
     useEffect(() => {showButton();}, []);
-    
+
+    console.log('Return Navbar Page')
 
     return (
         <>
@@ -45,7 +47,7 @@ function Navbar() {
                         </li>
                    </ul>
                    
-                   {button && <Button buttonstyle='btn--outline'>Periodic Table</Button>}
+                   {button && <Button buttonStyle='btn--outline'>Periodic Table</Button>}
                 </div> 
             </nav>
         </>

@@ -7,10 +7,7 @@ import { Button } from '../../navbar/button';
 
 const ElementShow = ({match, elementList, commentList }) => {
 
-
   const element = elementList.find(element => element.number === parseInt(match.params.elementId,10));
-
-  console.log(commentList);
 
     return (
       <div>

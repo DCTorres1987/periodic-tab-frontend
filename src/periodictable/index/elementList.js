@@ -15,7 +15,7 @@ const colorMap = {
 
 // stateless component used to output element JSX
 const ElementList = ({elementList}) => {
-
+    console.log('Render Element List')
         return(
             <div>
                  <span><h3>Choose an element from the periodic table </h3></span>

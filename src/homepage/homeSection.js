@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button } from './../navbar/button';
+import { Button } from '../navbar/button';
 import './homestyle.css';
 import '../App.css';
 
-function HomePage() {
+function Home() {
+    console.log('Render Home Page')
     return (
         <div className='home-container'>
             <video src='/videos/video-1.mp4' autoPlay loop muted />
@@ -22,4 +23,4 @@ function HomePage() {
     )
 }
 
-export default HomePage
+export default Home

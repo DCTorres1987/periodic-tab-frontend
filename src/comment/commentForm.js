@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { postComments } from "../actions/postComments"
 
-// container component handles how the form passes in data and updates the state
-class CommentForm extends Component {
-// constructor
-// it is the first function called upon the initialization of a component; this makes it useful for creating an initial state for a component.
-    constructor(props) {
-        super(props);
 
+class CommentForm extends Component {
+
+    constructor(props) {
+      
+        super(props);
         this.state = {
             name: '',
             comment: ''
@@ -16,6 +15,7 @@ class CommentForm extends Component {
     }
 
     handleSubmit = (e) => {
+        console.log('Submission Handling')
         e.preventDefault();
         const elementId = (this.props.element.id);
 
@@ -25,6 +25,7 @@ class CommentForm extends Component {
 
 
     handleChange = (e) => {
+        console.log('Looking for Comment Change')
         const { name, value } = e.target
         this.setState ({ [name]: value });
       }

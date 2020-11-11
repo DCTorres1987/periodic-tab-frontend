@@ -5,14 +5,15 @@ import ElementList from './index/elementList';
 import ElementShow from './show/elementShow';
 
 const ElementPage = ({ match, elementList, commentList }) => {
-  console.log(commentList, 'element page')
+ 
+  console.log(match)
     return (
 
         <div>         
             <Route exact path={match.url} 
-                   render={(routerProps) => <ElementList {...routerProps} elementList={elementList} />}/>
+                   render={() => <ElementList elementList={elementList} />}/>
             <Route path={`${match.path}/:elementId`} 
-                   render={routerProps => <ElementShow {...routerProps} elementList={elementList} commentList={commentList} />} />
+                   render={(routerProps) => <ElementShow {...routerProps} elementList={elementList} commentList={commentList} />} />
         </div>
     )    
 }
