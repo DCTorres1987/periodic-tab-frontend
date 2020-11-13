@@ -20,8 +20,6 @@ function Navbar() {
 
     useEffect(() => {showButton();}, []);
 
-    console.log('Return Navbar Page')
-
     return (
         <>
             <nav className="navbar">

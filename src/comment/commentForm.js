@@ -8,6 +8,7 @@ class CommentForm extends Component {
     constructor(props) {
       
         super(props);
+
         this.state = {
             name: '',
             comment: ''
@@ -15,7 +16,7 @@ class CommentForm extends Component {
     }
 
     handleSubmit = (e) => {
-        console.log('Submission Handling')
+      
         e.preventDefault();
         const elementId = (this.props.element.id);
 
@@ -25,7 +26,7 @@ class CommentForm extends Component {
 
 
     handleChange = (e) => {
-        console.log('Looking for Comment Change')
+       
         const { name, value } = e.target
         this.setState ({ [name]: value });
       }

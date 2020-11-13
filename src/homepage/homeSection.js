@@ -4,7 +4,7 @@ import './homestyle.css';
 import '../App.css';
 
 function Home() {
-    console.log('Render Home Page')
+  
     return (
         <div className='home-container'>
             <video src='/videos/video-1.mp4' autoPlay loop muted />
@@ -18,6 +18,7 @@ function Home() {
                 </Button>
 
             </div>
+            
         </div>
 
     )

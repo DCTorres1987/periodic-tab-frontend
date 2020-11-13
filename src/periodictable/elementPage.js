@@ -6,7 +6,6 @@ import ElementShow from './show/elementShow';
 
 const ElementPage = ({ match, elementList, commentList }) => {
  
-  console.log(match)
     return (
 
         <div>         

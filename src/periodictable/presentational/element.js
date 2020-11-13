@@ -2,7 +2,7 @@ import React from 'react';
 
 // presentational component
 const Element = ({element}) => {
-  console.log('Return Element Info')
+  
     return (
         <div>
     
