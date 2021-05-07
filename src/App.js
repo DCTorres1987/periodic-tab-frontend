@@ -18,13 +18,13 @@ import './App.css';
 class App extends Component {
 
   componentDidMount() {
-
+    console.log('Mount Fetches');
     this.props.fetchElements()
     this.props.fetchComments()
   }   
 
   render() {
-  
+  console.log('Render App Class Component');
     return (
       <>     
           <div className='App'>          
@@ -40,7 +40,7 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => {
-
+console.log('Map Dispatch To Props');
   return {
     fetchElements: () => dispatch(fetchElements()),
     fetchComments: () => dispatch(fetchComments())

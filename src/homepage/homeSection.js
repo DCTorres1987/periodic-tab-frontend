@@ -4,7 +4,7 @@ import './homestyle.css';
 import '../App.css';
 
 function Home() {
-  
+  console.log('Renders Home Page');
     return (
         <div className='home-container'>
             <video src='/videos/video-1.mp4' autoPlay loop muted />

@@ -1,5 +1,5 @@
 import React from 'react';
-
+// import CommentUpVote from './commentUpVote';
 
 const CommentsLoad = ({comments}) => {
 
@@ -7,15 +7,15 @@ const CommentsLoad = ({comments}) => {
         <div className='comments'>
             
             <p><u> COMMENTS </u></p><br></br>
-                <scroll-container>
+               
                     {comments.map((comment) => 
                         <div key={comment.id}>
                             Name: {comment.name} <br/>
                             Comment: {comment.comment} <br/><br/>
-                        </div>
+                            {/* <CommentUpVote/> */}
+                        </div>                       
                         
                     )}
-                </scroll-container>
 
         </div>
     )
